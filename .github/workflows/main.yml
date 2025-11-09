@@ -45,7 +45,7 @@ jobs:
     - name: Deployment 
       uses: azure/webapps-deploy@v2
       with:
-        app-name: Yaşar Apaydın Portfolio
+        app-name: YaşarApaydınPortfolyo
         publish-profile: ${{secrets.AZURE_PUBLISH_PROFILE}}
         package: './publish'
        
