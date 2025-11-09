@@ -16,13 +16,7 @@ namespace Portfolyo.DataAccess.Context
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder
-                .UseSqlServer("Data Source=DESKTOP-98AUGDI\\SQLEXPRESS;Initial Catalog=PortfolyeDb;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False")
-                .ConfigureWarnings(w => w.Ignore(RelationalEventId.PendingModelChangesWarning));
-        }
-
+    
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
