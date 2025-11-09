@@ -1,0 +1,36 @@
+name: Publish
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup .NET 9
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '9.0.x'
+
+    
+    - name: Create appsettings.json from secrets
+      run: |
+        echo "{" > appsettings.json
+        echo '  "Logging": {"LogLevel": {"Default": "Information","Microsoft.AspNetCore": "Warning"}},' >> appsettings.json
+        echo '  "AllowedHosts": "*",' >> appsettings.json
+        echo '  "ConnectionStrings": {"SqlServer": "${{ secrets.DB_CONNECTION_STRING }}"},' >> appsettings.json
+        echo '  "Jwt": {"Issuer": "${{ secrets.JWT_ISSUER }}","Audience": "${{ secrets.JWT_AUDIENCE }}","SecretKey": "${{ secrets.JWT_SECRETKEY }}"}}' >> appsettings.json
+        echo "}" >> appsettings.json
+
+    - name: Restore
+      run: dotnet restore Portfolyo.sln
+
+    - name: Build and publish .NET project
+      run: dotnet publish Portfolyo.sln -c Release --no-build
