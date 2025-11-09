@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kişisel Portfolio | Web Developer</title>
+    <link rel="stylesheet" href="/css/styless.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cursor Trail -->
+    <div class="cursor-trail"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">💫</span>
+                <span class="logo-text">Portfolio</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Ana Sayfa</a></li>
+                <li><a href="#about" class="nav-link">Hakkımda</a></li>
+                <li><a href="#skills" class="nav-link">Yetenekler</a></li>
+                <li><a href="#projects" class="nav-link">Projeler</a></li>
+                <li><a href="#contact" class="nav-link">İletişim</a></li>
+                <li><a href="login.html" class="nav-link admin-link" style="color: #a78bfa;">Yönetim</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="particles" id="particles"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="greeting">
+                    <span class="wave">👋</span>
+                    <span>Merhaba, Yaşar</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="name-text"></span>
+                    <span class="title-gradient"></span>
+                </h1>
+                <p class="hero-description"></p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>Projelerimi Gör</span>
+                        <i class="fas fa-rocket"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>İletişime Geç</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+                <div class="social-preview">
+                    <a href="" class="social-icon github" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="" class="social-icon linkedin" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="" class="social-icon website" target="_blank">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="profile-container">
+                    <div class="profile-card">
+                        <div class="card-bg"></div>
+                        <img src="https://i.ibb.co/FqK1ZGb4/resim.jpg" alt="Profile" class="profile-image">
+                        <div class="status-badge">
+                            <div class="status-dot"></div>
+                            <span>Çalışmaya Açık</span>
+                        </div>
+                    </div>
+                    <div class="floating-elements">
+                        <div class="float-item code">{ }</div>
+                        <div class="float-item react">⚛️</div>
+                        <div class="float-item js">JS</div>
+                        <div class="float-item css">🎨</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-text">Aşağı Kaydır</div>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Hakkımda</span>
+                <h2 class="section-title">Beni Tanıyın</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="text-block">
+                        <h3>Hikayem</h3>
+                        <p>
+                            Yazılım geliştirme dünyasına olan tutkum, sürekli öğrenme isteğim ve
+                            yaratıcı problem çözme yaklaşımım ile projelerimde fark yaratıyorum.
+                            Modern teknolojileri takip ediyor ve her projede en iyi uygulamaları
+                            hayata geçiriyorum.
+                        </p>
+                    </div>
+                    <div class="text-block">
+                        <h3>Vizyonum</h3>
+                        <p>
+                            Teknoloji ile insanların hayatını kolaylaştıran, kullanıcı deneyimini
+                            ön planda tutan ve sürdürülebilir çözümler geliştirmek. Her kod satırında
+                            kalite ve performansı hedefleyerek, dijital dünyada iz bırakacak projeler
+                            üretmek.
+                        </p>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="50">0</div>
+                            <div class="stat-label">Proje</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="3">0</div>
+                            <div class="stat-label">Yıl Deneyim</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <i class="fas fa-code"></i>
+                            <h4>Deneyim</h4>
+                        </div>
+                        <div class="experience-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Yetenekler</span>
+                <h2 class="section-title">Teknoloji Yığınım</h2>
+            </div>
+            <div class="skills-grid"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Projeler</span>
+                <h2 class="section-title">Öne Çıkan Çalışmalarım</h2>
+            </div>
+            <div class="projects-grid"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">İletişim</span>
+                <h2 class="section-title">Birlikte Çalışalım</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4>E-posta</h4>
+                    <p>apaydinyasar0@gmail.com</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h4>Telefon</h4>
+                    <p>+90 541 506 29 81</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/YasarApaydin" class="social-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ya%C5%9Far-apaydin-541647230/" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="" class="social-link" target="_blank">
+                        <i class="fas fa-globe"></i>
+                        <span>Website</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Portfolio. Tüm hakları saklıdır.</p>
+                <div class="footer-links">
+                    <a href="" class="social-icon github" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="" class="social-icon linkedin" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="" class="social-icon website" target="_blank">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/portfolyo.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+@Portfolyo.WebApi_HostAddress = http://localhost:5211
+
+GET {{Portfolyo.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

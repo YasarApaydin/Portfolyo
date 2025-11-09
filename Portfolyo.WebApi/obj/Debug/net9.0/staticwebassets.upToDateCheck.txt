@@ -1,0 +1,16 @@
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\wwwroot\index.html
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\wwwroot\js\admin.js
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\wwwroot\js\script.js
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\wwwroot\js\portfolyo.js
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\wwwroot\css\styless.css
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\wwwroot\js\login.js
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\wwwroot\admin.html
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\wwwroot\login.html
+wwwroot\admin.html
+wwwroot\css\styless.css
+wwwroot\index.html
+wwwroot\js\admin.js
+wwwroot\js\login.js
+wwwroot\js\portfolyo.js
+wwwroot\js\script.js
+wwwroot\login.html
