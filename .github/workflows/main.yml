@@ -32,8 +32,15 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore Portfolyo.sln
 
+
+
+    - name: Run unit tests
+      run: dotnet publish Portfolyo.sln --no-build --verbosity normal
+
+      
     - name: Build project
       run: dotnet build Portfolyo.sln -c Release --no-restore
 
+    
     - name: Publish project
       run: dotnet publish Portfolyo.sln -c Release -o ./publish --no-build
