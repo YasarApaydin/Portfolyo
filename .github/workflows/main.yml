@@ -41,7 +41,7 @@ jobs:
 
 
     - name: Publish project
-      run: dotnet publish ./Portfolyo.sln/Portfolyo.WebApi.csproj -c Release -o ./publish --no-build --output '${{secrets.AZURE_PUBLISH_PROFILE}}'
+      run: dotnet publish ./Portfolyo.sln/Portfolyo.WebApi.csproj -c Release -o ./publish --no-build --output './publish'
     - name: Deployment 
       uses: azure/webapps-deploy@v2
       with:
