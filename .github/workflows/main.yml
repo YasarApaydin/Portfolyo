@@ -19,18 +19,21 @@ jobs:
       with:
         dotnet-version: '9.0.x'
 
-    
     - name: Create appsettings.json from secrets
       run: |
-        echo "{" > appsettings.json
-        echo '  "Logging": {"LogLevel": {"Default": "Information","Microsoft.AspNetCore": "Warning"}},' >> appsettings.json
-        echo '  "AllowedHosts": "*",' >> appsettings.json
-        echo '  "ConnectionStrings": {"SqlServer": "${{ secrets.DB_CONNECTION_STRING }}"},' >> appsettings.json
-        echo '  "Jwt": {"Issuer": "${{ secrets.JWT_ISSUER }}","Audience": "${{ secrets.JWT_AUDIENCE }}","SecretKey": "${{ secrets.JWT_SECRETKEY }}"}}' >> appsettings.json
-        echo "}" >> appsettings.json
+        mkdir -p Portfolyo.WebApi
+        echo "{" > Portfolyo.WebApi/appsettings.json
+        echo '  "Logging": {"LogLevel": {"Default": "Information","Microsoft.AspNetCore": "Warning"}},' >> Portfolyo.WebApi/appsettings.json
+        echo '  "AllowedHosts": "*",' >> Portfolyo.WebApi/appsettings.json
+        echo '  "ConnectionStrings": {"SqlServer": "${{ secrets.DB_CONNECTION_STRING }}"},' >> Portfolyo.WebApi/appsettings.json
+        echo '  "Jwt": {"Issuer": "${{ secrets.JWT_ISSUER }}","Audience": "${{ secrets.JWT_AUDIENCE }}","SecretKey": "${{ secrets.JWT_SECRETKEY }}"}}' >> Portfolyo.WebApi/appsettings.json
+        echo "}" >> Portfolyo.WebApi/appsettings.json
 
-    - name: Restore
+    - name: Restore dependencies
       run: dotnet restore Portfolyo.sln
 
-    - name: Build and publish .NET project
-      run: dotnet publish Portfolyo.sln -c Release --no-build
+    - name: Build project
+      run: dotnet build Portfolyo.sln -c Release --no-restore
+
+    - name: Publish project
+      run: dotnet publish Portfolyo.sln -c Release -o ./publish --no-build
