@@ -88,13 +88,11 @@ C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\bin\Debug\net9.0\Sys
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\bin\Debug\net9.0\System.Diagnostics.EventLog.dll
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\bin\Debug\net9.0\System.Drawing.Common.dll
-C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\bin\Debug\net9.0\System.Formats.Asn1.dll
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\bin\Debug\net9.0\System.Memory.Data.dll
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\bin\Debug\net9.0\System.Runtime.Caching.dll
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\bin\Debug\net9.0\System.Security.Permissions.dll
-C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\bin\Debug\net9.0\System.Text.Json.dll
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\bin\Debug\net9.0\System.Windows.Extensions.dll
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\bin\Debug\net9.0\xunit.abstractions.dll
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\bin\Debug\net9.0\xunit.assert.dll
@@ -190,10 +188,10 @@ C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\obj\Debug\net9.0\Por
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\obj\Debug\net9.0\Portfolyo.Tests.Unit.AssemblyInfoInputs.cache
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\obj\Debug\net9.0\Portfolyo.Tests.Unit.AssemblyInfo.cs
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\obj\Debug\net9.0\Portfolyo.Tests.Unit.csproj.CoreCompileInputs.cache
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\obj\Debug\net9.0\Portfolyo.Tests.Unit.sourcelink.json
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\obj\Debug\net9.0\Portfoly.EDA6F174.Up2Date
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\obj\Debug\net9.0\Portfolyo.Tests.Unit.dll
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\obj\Debug\net9.0\refint\Portfolyo.Tests.Unit.dll
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\obj\Debug\net9.0\Portfolyo.Tests.Unit.pdb
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\obj\Debug\net9.0\Portfolyo.Tests.Unit.genruntimeconfig.cache
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\obj\Debug\net9.0\ref\Portfolyo.Tests.Unit.dll
-C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\obj\Debug\net9.0\Portfolyo.Tests.Unit.sourcelink.json

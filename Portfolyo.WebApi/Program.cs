@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Portfolyo.Business;
-using Portfolyo.DataAccess;
+//using Portfolyo.DataAccess;
 using Portfolyo.Entities.Models;
 using Portfolyo.Entities.Options;
 using Portfolyo.WebApi.Middleware;
@@ -50,12 +50,12 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddBusiness();
 
-builder.Services.AddDataAccess(builder.Configuration);
+//builder.Services.AddDataAccess(builder.Configuration);
 builder.Services.AddTransient<ExceptionMiddleware>();
 
 builder.Services.AddControllers();
 
-builder.Services.AddOpenApi();
+//builder.Services.AddOpenApi();
 
 
 
@@ -95,7 +95,7 @@ var app = builder.Build();
 
 if (builder.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+ //   app.MapOpenApi();
     app.MapScalarApiReference();
     app.UseDeveloperExceptionPage();
 }

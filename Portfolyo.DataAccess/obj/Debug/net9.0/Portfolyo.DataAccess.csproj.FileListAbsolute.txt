@@ -9,10 +9,10 @@ C:\Users\Casper\source\repos\Portfolyo\Portfolyo.DataAccess\obj\Debug\net9.0\Por
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.DataAccess\obj\Debug\net9.0\Portfolyo.DataAccess.AssemblyInfoInputs.cache
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.DataAccess\obj\Debug\net9.0\Portfolyo.DataAccess.AssemblyInfo.cs
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.DataAccess\obj\Debug\net9.0\Portfolyo.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.DataAccess\obj\Debug\net9.0\Portfolyo.DataAccess.sourcelink.json
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.DataAccess\obj\Debug\net9.0\Portfoly.C6249231.Up2Date
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.DataAccess\obj\Debug\net9.0\Portfolyo.DataAccess.dll
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.DataAccess\obj\Debug\net9.0\refint\Portfolyo.DataAccess.dll
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.DataAccess\obj\Debug\net9.0\Portfolyo.DataAccess.pdb
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.DataAccess\obj\Debug\net9.0\Portfolyo.DataAccess.genruntimeconfig.cache
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.DataAccess\obj\Debug\net9.0\ref\Portfolyo.DataAccess.dll
-C:\Users\Casper\source\repos\Portfolyo\Portfolyo.DataAccess\obj\Debug\net9.0\Portfolyo.DataAccess.sourcelink.json
