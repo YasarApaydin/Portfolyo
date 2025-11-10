@@ -1,0 +1,16 @@
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Business\bin\Debug\net8.0\Portfolyo.Business.deps.json
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Business\bin\Debug\net8.0\Portfolyo.Business.dll
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Business\bin\Debug\net8.0\Portfolyo.Business.pdb
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Business\bin\Debug\net8.0\Portfolyo.Entities.dll
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Business\bin\Debug\net8.0\Portfolyo.Entities.pdb
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Business\obj\Debug\net8.0\Portfolyo.Business.csproj.AssemblyReference.cache
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Business\obj\Debug\net8.0\Portfolyo.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Business\obj\Debug\net8.0\Portfolyo.Business.AssemblyInfoInputs.cache
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Business\obj\Debug\net8.0\Portfolyo.Business.AssemblyInfo.cs
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Business\obj\Debug\net8.0\Portfolyo.Business.csproj.CoreCompileInputs.cache
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Business\obj\Debug\net8.0\Portfolyo.Business.sourcelink.json
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Business\obj\Debug\net8.0\Portfoly.D6D1DC84.Up2Date
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Business\obj\Debug\net8.0\Portfolyo.Business.dll
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Business\obj\Debug\net8.0\refint\Portfolyo.Business.dll
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Business\obj\Debug\net8.0\Portfolyo.Business.pdb
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Business\obj\Debug\net8.0\ref\Portfolyo.Business.dll

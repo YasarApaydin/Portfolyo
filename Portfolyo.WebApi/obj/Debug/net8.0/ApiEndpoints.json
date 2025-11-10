@@ -1,0 +1,338 @@
+[
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginCommand",
+        "Type": "Portfolyo.Business.Features.Auth.Login.LoginCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.ExperienceController",
+    "Method": "Add",
+    "RelativePath": "api/Experience/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portfolyo.Business.Features.Experience.CreateExperience.CreateExperienceCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.ExperienceController",
+    "Method": "GetAll",
+    "RelativePath": "api/Experience/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portfolyo.Business.Features.Experience.GetExperience.GetExperienceCommand",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.ExperienceController",
+    "Method": "RemoveById",
+    "RelativePath": "api/Experience/RemoveById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portfolyo.Business.Features.Experience.RemoveExperience.RemoveExperienceCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.ExperienceController",
+    "Method": "Update",
+    "RelativePath": "api/Experience/Update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portfolyo.Business.Features.Experience.UpdateExperience.UpdateExperienceCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.ProfileController",
+    "Method": "Add",
+    "RelativePath": "api/Profile/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portfolyo.Business.Features.Profiles.CreateProfile.CreateProfileCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.ProfileController",
+    "Method": "GetAll",
+    "RelativePath": "api/Profile/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portfolyo.Business.Features.Profiles.GetProfile.GetProfileQuery",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.ProfileController",
+    "Method": "RemoveById",
+    "RelativePath": "api/Profile/RemoveById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portfolyo.Business.Features.Profiles.RemoveProfile.RemoveProfileCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.ProfileController",
+    "Method": "Update",
+    "RelativePath": "api/Profile/Update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portfolyo.Business.Features.Profiles.UpdateProfile.UpdateProfileCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.ProjectController",
+    "Method": "Add",
+    "RelativePath": "api/Project/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portfolyo.Business.Features.Projects.CreateProject.CreateProjectCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.ProjectController",
+    "Method": "GetAll",
+    "RelativePath": "api/Project/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portfolyo.Business.Features.Projects.GetProject.GetProjectQuery",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.ProjectController",
+    "Method": "RemoveById",
+    "RelativePath": "api/Project/RemoveById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portfolyo.Business.Features.Projects.RemoveProject.RemoveProjectCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.ProjectController",
+    "Method": "Update",
+    "RelativePath": "api/Project/Update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portfolyo.Business.Features.Projects.UpdateProject.UpdateProjectCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.RoleController",
+    "Method": "Add",
+    "RelativePath": "api/Role/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createRole",
+        "Type": "Portfolyo.Business.Features.Roles.CreateRole.CreateRoleCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.RoleController",
+    "Method": "GetAll",
+    "RelativePath": "api/Role/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "getRole",
+        "Type": "Portfolyo.Business.Features.Roles.GetRole.GetRoleQuery",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.SkillController",
+    "Method": "Add",
+    "RelativePath": "api/Skill/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portfolyo.Business.Features.Skills.CreateSkill.CreateSkillCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.SkillController",
+    "Method": "GetAll",
+    "RelativePath": "api/Skill/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portfolyo.Business.Features.Skills.GetSkill.GetSkillQuery",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.SkillController",
+    "Method": "RemoveById",
+    "RelativePath": "api/Skill/RemoveById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portfolyo.Business.Features.Skills.RemoveSkill.RemoveSkillCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.SkillController",
+    "Method": "Update",
+    "RelativePath": "api/Skill/Update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portfolyo.Business.Features.Skills.UpdateSkill.UpdateSkillCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.UserController",
+    "Method": "GetAll",
+    "RelativePath": "api/User/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portfolyo.Business.Features.Users.GetUser.GetUserQuery",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.UserController",
+    "Method": "Update",
+    "RelativePath": "api/User/Update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portfolyo.Business.Features.Users.UpdateUser.UpdateUserCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

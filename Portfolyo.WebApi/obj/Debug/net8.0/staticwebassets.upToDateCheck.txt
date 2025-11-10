@@ -1,0 +1,8 @@
+wwwroot\admin.html
+wwwroot\css\styless.css
+wwwroot\index.html
+wwwroot\js\admin.js
+wwwroot\js\login.js
+wwwroot\js\portfolyo.js
+wwwroot\js\script.js
+wwwroot\login.html
