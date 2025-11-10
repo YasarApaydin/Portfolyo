@@ -1,4 +1,4 @@
-﻿const API_BASE = "https://yasarapaydinportfolyo-a5e0bwb5e8hrede5.westeurope-01.azurewebsites.net/";
+﻿const API_BASE = "https://yasarapaydinportfolyo-a5e0bwb5e8hrede5.westeurope-01.azurewebsites.net";
 const AUTH_TOKEN_KEY = "jwtToken";
 const AUTH_KEY = "isAuthenticated";
 const CONTENT_TYPES = ["profile", "project", "skill", "experience"];
