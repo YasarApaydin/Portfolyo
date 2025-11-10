@@ -32,8 +32,8 @@ builder.Services.AddAuthentication().AddJwtBearer(cfr =>
 
 
 string allowedOrigin = builder.Environment.IsDevelopment()
-    ? "https://yasarapaydinportfolyo-a5e0bwb5e8hrede5.westeurope-01.azurewebsites.net/"
-    : "http://127.0.0.1:5500";
+    ? "http://127.0.0.1:5500"
+    : "https://yasarapaydinportfolyo-a5e0bwb5e8hrede5.westeurope-01.azurewebsites.net";
 
 
 
