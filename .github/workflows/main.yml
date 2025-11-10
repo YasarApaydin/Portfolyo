@@ -1,10 +1,10 @@
 name: Publish
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -12,36 +12,35 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Setup .NET 8
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '8.0.x'
 
     - name: Create appsettings.json from secrets
       run: |
         mkdir -p Portfolyo.WebApi
-        # cat kullanarak secrets ile birlikte düzgün JSON oluşturuluyor.
-        cat << EOF > Portfolyo.WebApi/appsettings.json
-{
-  "Logging": {
-    "LogLevel": {
-      "Default": "Information",
-      "Microsoft.AspNetCore": "Warning"
-    }
-  },
-  "AllowedHosts": "*",
-  "ConnectionStrings": {
-    "SqlServer": "${{ secrets.DB_CONNECTION_STRING }}"
-  },
-  "Jwt": {
-    "Issuer": "${{ secrets.JWT_ISSUER }}",
-    "Audience": "${{ secrets.JWT_AUDIENCE }}",
-    "SecretKey": "${{ secrets.JWT_SECRETKEY }}"
-  }
-}
-EOF
+        cat << 'EOF' > Portfolyo.WebApi/appsettings.json
+        {
+          "Logging": {
+            "LogLevel": {
+              "Default": "Information",
+              "Microsoft.AspNetCore": "Warning"
+            }
+          },
+          "AllowedHosts": "*",
+          "ConnectionStrings": {
+            "SqlServer": "${{ secrets.DB_CONNECTION_STRING }}"
+          },
+          "Jwt": {
+            "Issuer": "${{ secrets.JWT_ISSUER }}",
+            "Audience": "${{ secrets.JWT_AUDIENCE }}",
+            "SecretKey": "${{ secrets.JWT_SECRETKEY }}"
+          }
+        }
+        EOF
 
     - name: Restore dependencies
       run: dotnet restore Portfolyo.sln
@@ -53,11 +52,11 @@ EOF
       run: dotnet test Portfolyo.sln --no-build --verbosity normal
 
     - name: Publish project
-      run: dotnet publish ./Portfolyo.WebApi/Portfolyo.WebApi.csproj -c Release --no-build --output './publish'
-      
-    - name: Deployment 
+      run: dotnet publish ./Portfolyo.WebApi/Portfolyo.WebApi.csproj -c Release --no-build --output ./publish
+
+    - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'YasarApaydinPortfolyo'
+        app-name: 'YasarApaydinPortfolyo' # Azure App Service ismi birebir aynı olmalı
         publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
         package: './publish'
