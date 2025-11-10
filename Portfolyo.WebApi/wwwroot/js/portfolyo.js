@@ -1,4 +1,4 @@
-﻿const API_BASE_URL = "https://localhost:7170/api";
+﻿const API_BASE_URL = "https://yasarapaydinportfolyo-a5e0bwb5e8hrede5.westeurope-01.azurewebsites.net/";
 
 const GITHUB_USERNAME = "YasarApaydin";
 document.addEventListener("DOMContentLoaded", async () => {

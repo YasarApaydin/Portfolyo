@@ -26,7 +26,7 @@
             loginMessage.className = "auth-message";
             loginMessage.textContent = "Giriş Yapılıyor...";
 
-            const response = await fetch("https://localhost:7170/api/auth/login", {
+            const response = await fetch("https://yasarapaydinportfolyo-a5e0bwb5e8hrede5.westeurope-01.azurewebsites.net/auth/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ userNameOrEmail: userName, password: password })
