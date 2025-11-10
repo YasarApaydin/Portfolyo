@@ -194,3 +194,4 @@ C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net9.0\compres
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net9.0\compressed\umnmfz3xut-g9wxw37rh8.gz
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net9.0\compressed\z32tbmuhvt-20yfp0psc2.gz
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net9.0\compressed\1bbvng5wy1-31mqwpog29.gz
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net9.0\Portfolyo.WebApi.sourcelink.json

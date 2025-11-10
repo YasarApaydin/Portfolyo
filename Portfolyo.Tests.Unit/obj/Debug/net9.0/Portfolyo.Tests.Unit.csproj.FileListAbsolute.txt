@@ -196,3 +196,4 @@ C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\obj\Debug\net9.0\ref
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\obj\Debug\net9.0\Portfolyo.Tests.Unit.pdb
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\obj\Debug\net9.0\Portfolyo.Tests.Unit.genruntimeconfig.cache
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\obj\Debug\net9.0\ref\Portfolyo.Tests.Unit.dll
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Tests.Unit\obj\Debug\net9.0\Portfolyo.Tests.Unit.sourcelink.json

@@ -10,3 +10,4 @@ C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Entities\obj\Debug\net9.0\Portf
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Entities\obj\Debug\net9.0\refint\Portfolyo.Entities.dll
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Entities\obj\Debug\net9.0\Portfolyo.Entities.pdb
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Entities\obj\Debug\net9.0\ref\Portfolyo.Entities.dll
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Entities\obj\Debug\net9.0\Portfolyo.Entities.sourcelink.json

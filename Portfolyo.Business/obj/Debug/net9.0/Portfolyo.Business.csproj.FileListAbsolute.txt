@@ -13,3 +13,4 @@ C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Business\obj\Debug\net9.0\Portf
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Business\obj\Debug\net9.0\refint\Portfolyo.Business.dll
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Business\obj\Debug\net9.0\Portfolyo.Business.pdb
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Business\obj\Debug\net9.0\ref\Portfolyo.Business.dll
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.Business\obj\Debug\net9.0\Portfolyo.Business.sourcelink.json
