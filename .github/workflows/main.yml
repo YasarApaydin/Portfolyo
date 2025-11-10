@@ -22,7 +22,7 @@ jobs:
     - name: Create appsettings.json from secrets
       run: |
         mkdir -p Portfolyo.WebApi
-        cat << 'EOF' > Portfolyo.WebApi/appsettings.json
+        cat <<EOF > Portfolyo.WebApi/appsettings.json
         {
           "Logging": {
             "LogLevel": {
@@ -32,7 +32,7 @@ jobs:
           },
           "AllowedHosts": "*",
           "ConnectionStrings": {
-            "SqlServer": '${{ secrets.DB_CONNECTION_STRING }}'
+            "SqlServer": "${{ secrets.DB_CONNECTION_STRING }}"
           },
           "Jwt": {
             "Issuer": "${{ secrets.JWT_ISSUER }}",
@@ -57,6 +57,6 @@ jobs:
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'YasarApaydinPortfolyo' # Azure App Service ismi birebir aynı olmalı
+        app-name: 'YasarApaydinPortfolyo'
         publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
         package: './publish'
