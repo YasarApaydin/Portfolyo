@@ -106,7 +106,7 @@ app.UseHttpsRedirection();
 app.UseCors("AllowFrontend");
 app.UseDefaultFiles();
 app.UseStaticFiles();
-app.UseRateLimiter();
+
 app.UseRateLimiter();
 app.UseAuthorization();
 app.MapControllers();
