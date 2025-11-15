@@ -59,20 +59,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddRateLimiter(options =>
 {
-    options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(ctx =>
-    {
-        var ip = ctx.Connection.RemoteIpAddress?.ToString() ?? "unknown";
-        return RateLimitPartition.GetTokenBucketLimiter(ip, _ => new TokenBucketRateLimiterOptions
-        {
-            TokenLimit = 60,
-            TokensPerPeriod = 60,
-            QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
-            QueueLimit = 0,
-            ReplenishmentPeriod = TimeSpan.FromMinutes(1),
-            AutoReplenishment = true
-        });
-    });
-
+ 
     options.AddPolicy("LoginPolicy", ctx =>
     {
         var ip = ctx.Connection.RemoteIpAddress?.ToString() ?? "unknown";
