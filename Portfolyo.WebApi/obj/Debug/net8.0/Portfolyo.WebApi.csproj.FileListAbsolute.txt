@@ -163,3 +163,6 @@ C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net8.0\refint\
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net8.0\Portfolyo.WebApi.pdb
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net8.0\Portfolyo.WebApi.genruntimeconfig.cache
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net8.0\ref\Portfolyo.WebApi.dll
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net8.0\swae.build.ex.cache
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net8.0\Portfolyo.WebApi.RazorAssemblyInfo.cache
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net8.0\Portfolyo.WebApi.RazorAssemblyInfo.cs

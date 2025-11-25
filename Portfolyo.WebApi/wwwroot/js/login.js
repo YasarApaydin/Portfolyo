@@ -44,12 +44,12 @@
 
             localStorage.setItem("jwtToken", data.data.accessToken);
 
-
+           
             loginMessage.textContent = "Giriş başarılı! Yönlendiriliyor...";
             loginMessage.classList.add("success-message");
 
             setTimeout(() => {
-                window.location.href = "admin.html";
+                window.location.href = "/admin";
             }, 1000);
 
 

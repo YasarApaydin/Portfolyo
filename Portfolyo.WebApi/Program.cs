@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -28,6 +29,7 @@ builder.Services.AddAuthentication().AddJwtBearer(cfr =>
         ValidAudience = jwtConfiguration.Audience,
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtConfiguration.SecretKey))
     };
+
 });
 
 
@@ -54,7 +56,7 @@ builder.Services.AddDataAccess(builder.Configuration);
 builder.Services.AddTransient<ExceptionMiddleware>();
 
 builder.Services.AddControllers();
-
+builder.Services.AddRazorPages();
 
 
 builder.Services.AddRateLimiter(options =>
@@ -76,6 +78,10 @@ builder.Services.AddRateLimiter(options =>
 });
 
 
+
+
+
+
 var app = builder.Build();
 
 if (builder.Environment.IsDevelopment())
@@ -93,8 +99,11 @@ app.UseDefaultFiles();
 app.UseStaticFiles();
 
 app.UseRateLimiter();
+app.UseAuthentication();
 app.UseAuthorization();
+
 app.MapControllers();
+app.MapRazorPages();
 
 
 
