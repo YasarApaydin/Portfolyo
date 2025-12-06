@@ -49,7 +49,7 @@
             loginMessage.classList.add("success-message");
 
             setTimeout(() => {
-                window.location.href = "/admin.html";
+                window.location.href = "https://yasarapaydinportfolyo-a5e0bwb5e8hrede5.westeurope-01.azurewebsites.net/admin";
             }, 1000);
 
 
