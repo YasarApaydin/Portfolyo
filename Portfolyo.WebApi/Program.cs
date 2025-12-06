@@ -101,7 +101,7 @@ app.Use(async (context, next) =>
     {
         if (!context.User.Identity?.IsAuthenticated ?? true)
         {
-            context.Response.StatusCode = 404;
+            context.Response.StatusCode = 403;
             return; 
         }
     }
