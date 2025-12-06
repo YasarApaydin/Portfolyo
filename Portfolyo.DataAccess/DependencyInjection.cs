@@ -31,6 +31,15 @@ namespace Portfolyo.DataAccess
             .AsMatchingInterface()
             .WithScopedLifetime());
 
+            using (var provider = services.BuildServiceProvider())
+            {
+                using var scope = provider.CreateScope();
+                var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+               
+                db.Database.CanConnect();
+               
+            }
 
             return services;
 

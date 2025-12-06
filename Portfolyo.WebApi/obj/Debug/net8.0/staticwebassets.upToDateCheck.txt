@@ -1,3 +1,4 @@
+wwwroot\admin.html
 wwwroot\css\styless.css
 wwwroot\index.html
 wwwroot\js\admin.js

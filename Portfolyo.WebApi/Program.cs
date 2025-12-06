@@ -1,10 +1,7 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Portfolyo.Business;
 using Portfolyo.DataAccess;
-using Portfolyo.Entities.Models;
 using Portfolyo.Entities.Options;
 using Portfolyo.WebApi.Middleware;
 using Scalar.AspNetCore;
@@ -56,7 +53,6 @@ builder.Services.AddDataAccess(builder.Configuration);
 builder.Services.AddTransient<ExceptionMiddleware>();
 
 builder.Services.AddControllers();
-builder.Services.AddRazorPages();
 
 
 builder.Services.AddRateLimiter(options =>
@@ -94,6 +90,25 @@ if (builder.Environment.IsDevelopment())
 
 app.UseMiddleware<ExceptionMiddleware>();
 app.UseHttpsRedirection();
+
+app.Use(async (context, next) =>
+{
+    var path = context.Request.Path.Value?.ToLower();
+
+    if (path == "/admin.html")
+    {
+        if (!context.User.Identity?.IsAuthenticated ?? true)
+        {
+            context.Response.StatusCode = 404;
+            return; 
+        }
+    }
+
+    await next();
+});
+
+
+
 app.UseCors("AllowFrontend");
 app.UseDefaultFiles();
 app.UseStaticFiles();
@@ -103,7 +118,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
-app.MapRazorPages();
+
 
 
 
