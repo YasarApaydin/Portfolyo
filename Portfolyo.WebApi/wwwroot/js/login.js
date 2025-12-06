@@ -34,7 +34,7 @@
 
             const data = await response.json();
 
-            // HTTP 200 ama success = false olabilir
+          
             if (!response.ok || !data.success) {
                 loginMessage.textContent = data.message || "Hatalı giriş!";
                 loginMessage.classList.add("error-message");
@@ -48,7 +48,12 @@
             loginMessage.textContent = "Giriş başarılı! Yönlendiriliyor...";
             loginMessage.classList.add("success-message");
 
-      
+            setTimeout(() => {
+                window.location.href = "/admin.html"
+";
+            }, 1000);
+
+
 
 
 
