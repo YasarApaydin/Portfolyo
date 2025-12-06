@@ -156,6 +156,7 @@ C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net8.0\staticw
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net8.0\swae.build.ex.cache
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net8.0\Portfoly.3822830F.Up2Date
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net8.0\Portfolyo.WebApi.dll
@@ -163,4 +164,3 @@ C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net8.0\refint\
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net8.0\Portfolyo.WebApi.pdb
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net8.0\Portfolyo.WebApi.genruntimeconfig.cache
 C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net8.0\ref\Portfolyo.WebApi.dll
-C:\Users\Casper\source\repos\Portfolyo\Portfolyo.WebApi\obj\Debug\net8.0\swae.build.ex.cache
