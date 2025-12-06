@@ -90,7 +90,7 @@ if (builder.Environment.IsDevelopment())
 
 app.UseMiddleware<ExceptionMiddleware>();
 app.UseHttpsRedirection();
-
+/*
 app.Use(async (context, next) =>
 {
     var path = context.Request.Path.Value?.ToLower();
@@ -106,7 +106,7 @@ app.Use(async (context, next) =>
 
     await next();
 });
-
+*/
 
 
 app.UseCors("AllowFrontend");
