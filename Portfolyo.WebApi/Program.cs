@@ -90,6 +90,8 @@ if (builder.Environment.IsDevelopment())
 
 app.UseMiddleware<ExceptionMiddleware>();
 app.UseHttpsRedirection();
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.Use(async (context, next) =>
 {
@@ -113,8 +115,7 @@ app.UseDefaultFiles();
 app.UseStaticFiles();
 
 app.UseRateLimiter();
-app.UseAuthentication();
-app.UseAuthorization();
+
 
 app.MapControllers();
 
