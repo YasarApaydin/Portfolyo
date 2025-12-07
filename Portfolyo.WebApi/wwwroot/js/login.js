@@ -44,32 +44,13 @@
 
 
 
-            localStorage.setItem("jwtToken", data.data.accessToken);
-
             loginMessage.textContent = "Giriş başarılı! Yönlendiriliyor...";
             loginMessage.classList.add("success-message");
 
             setTimeout(() => {
-                const token = localStorage.getItem("jwtToken");
-                if (!token) {
-                    window.location.href = "login.html";
-                } else {
-                    fetch("https://yasarapaydinportfolyo-a5e0bwb5e8hrede5.westeurope-01.azurewebsites.net/admin", {
-                        headers: {
-                            "Authorization": `Bearer ${token}`
-                        }
-                    })
-                        .then(resp => {
-                            if (resp.ok) {
-                                window.location.href = "https://yasarapaydinportfolyo-a5e0bwb5e8hrede5.westeurope-01.azurewebsites.net/admin";
-                            } else {
-                                alert("Erişim reddedildi. Lütfen tekrar giriş yapın.");
-                                window.location.href = "login.html";
-                            }
-                        });
-                }
+              
+                window.location.href = "/admin.html";
             }, 1000);
-
 
         });
     }

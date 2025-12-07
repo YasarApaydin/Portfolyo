@@ -14,21 +14,41 @@ builder.Services.Configure<Jwt>(builder.Configuration.GetSection("Jwt"));
 
 var serviceProvider = builder.Services.BuildServiceProvider();
 var jwtConfiguration = serviceProvider.GetRequiredService<IOptions<Jwt>>().Value;
-builder.Services.AddAuthentication().AddJwtBearer(cfr =>
+
+
+builder.Services.AddAuthentication(options =>
 {
-    cfr.TokenValidationParameters = new()
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.Events = new JwtBearerEvents
+    {
+        OnMessageReceived = context =>
+        {
+            // Token cookie’den alýnýyor
+            if (context.Request.Cookies.ContainsKey("jwtToken"))
+            {
+                context.Token = context.Request.Cookies["jwtToken"];
+            }
+            return Task.CompletedTask;
+        }
+    };
+
+    options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = true,
         ValidateAudience = true,
         ValidateIssuerSigningKey = true,
         ValidateLifetime = true,
         ValidIssuer = jwtConfiguration.Issuer,
-        ClockSkew = TimeSpan.Zero,
         ValidAudience = jwtConfiguration.Audience,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtConfiguration.SecretKey))
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtConfiguration.SecretKey)),
+        ClockSkew = TimeSpan.Zero
     };
-
 });
+
 
 
 string allowedOrigin = builder.Environment.IsDevelopment()
@@ -89,7 +109,6 @@ if (builder.Environment.IsDevelopment())
 }
 
 
-app.UseMiddleware<ExceptionMiddleware>();
 
 
 
@@ -99,9 +118,11 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseMiddleware<ExceptionMiddleware>();
+app.UseRateLimiter();
 
-
-
+app.UseDefaultFiles();
+app.UseStaticFiles();
 app.Use(async (context, next) =>
 {
     var path = context.Request.Path.Value?.ToLower();
@@ -117,9 +138,8 @@ app.Use(async (context, next) =>
 
     await next();
 });
-app.UseRateLimiter();
-app.UseDefaultFiles();
-app.UseStaticFiles();
+
+
 
 
 
