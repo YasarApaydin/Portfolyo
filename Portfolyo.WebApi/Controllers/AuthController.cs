@@ -48,7 +48,7 @@ namespace Portfolyo.WebApi.Controllers
 
 
 
-        [HttpPost("logout")]
+        [HttpPost]
         [Authorize]
         public IActionResult Logout()
         {
