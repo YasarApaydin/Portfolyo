@@ -32,7 +32,7 @@ namespace Portfolyo.WebApi.Controllers
                 HttpOnly = true,
                 Secure = true, 
                 SameSite = SameSiteMode.Strict,
-                Expires = DateTimeOffset.Now.AddHours(2)
+                Expires = DateTimeOffset.Now.AddMinutes(2)
             };
             Response.Cookies.Append("jwtToken", response.AccessToken, cookieOptions);
 
