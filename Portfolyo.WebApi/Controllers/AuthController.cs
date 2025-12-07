@@ -26,7 +26,7 @@ namespace Portfolyo.WebApi.Controllers
             if (response == null)
                 return BadRequest(new { success = false, message = "Giriş Başarısız." });
 
-            // Cookie olarak yaz
+          
             var cookieOptions = new CookieOptions
             {
                 HttpOnly = true,
@@ -44,13 +44,6 @@ namespace Portfolyo.WebApi.Controllers
             });
         }
 
-
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        [HttpGet("/admin")]
-        public IActionResult GetAdminPage()
-        {
-            return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "admin.html"), "text/html");
-        }
 
 
 
