@@ -16,25 +16,10 @@ var serviceProvider = builder.Services.BuildServiceProvider();
 var jwtConfiguration = serviceProvider.GetRequiredService<IOptions<Jwt>>().Value;
 
 
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
+builder.Services.AddAuthentication()
 .AddJwtBearer(options =>
 {
-    options.Events = new JwtBearerEvents
-    {
-        OnMessageReceived = context =>
-        {
-            // Token cookie’den alýnýyor
-            if (context.Request.Cookies.ContainsKey("jwtToken"))
-            {
-                context.Token = context.Request.Cookies["jwtToken"];
-            }
-            return Task.CompletedTask;
-        }
-    };
+
 
     options.TokenValidationParameters = new TokenValidationParameters
     {
