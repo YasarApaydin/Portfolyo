@@ -313,31 +313,34 @@ function setupLogout() {
     if (!logoutBtn) return;
 
     logoutBtn.addEventListener("click", async () => {
-        try {
-            // Sunucudaki Auth cookie'lerini temizle
-            await fetch("https://yasarapaydinportfolyo-a5e0bwb5e8hrede5.westeurope-01.azurewebsites.net/api/auth/logout", {
-                method: "POST",
-                credentials: "include"
-            });
-        } catch (err) {
-            console.error("Logout API hatası:", err);
-        }
 
-        // LocalStorage temizle
-        localStorage.clear();
+        // Önce server cookie'yi temizlesin
+        await fetch(`${API_BASE}/auth/logout`, {
+            method: "POST",
+            credentials: "include"
+        }).catch(() => {
+            console.warn("Server logout çalışmadı, client tarafı temizlenecek.");
+        });
+
+        // ---- TARAYICI TEMİZLİĞİ ----
+
+        // JWT LocalStorage sil
+        localStorage.removeItem(AUTH_TOKEN_KEY);
+        localStorage.removeItem(AUTH_KEY);
 
         // SessionStorage temizle
         sessionStorage.clear();
 
-        // Tarayıcıdaki tüm cookie’leri temizle (HttpOnly olmayanlar)
-        document.cookie.split(";").forEach((cookie) => {
-            const eqPos = cookie.indexOf("=");
-            const name = eqPos > -1 ? cookie.substring(0, eqPos) : cookie;
-            document.cookie =
-                name.trim() + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+        // HttpOnly olmayan tüm cookie’leri temizle
+        document.cookie.split(";").forEach(cookie => {
+            const name = cookie.split("=")[0].trim();
+            document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/`;
         });
 
-        // Kullanıcıyı login sayfasına yönlendir
+        // RAM'de tutulan token bilgisi temizle
+        window.__tokenCache = null;
+
+        // Server logout bittikten sonra yönlendir
         window.location.href = "login.html";
     });
 }
