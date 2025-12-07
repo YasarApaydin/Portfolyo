@@ -307,13 +307,6 @@ async function apiFetch(path, method = "GET", body = null) {
     return payload;
 }
 
-function checkAdminAccess() {
-    const token = localStorage.getItem(AUTH_TOKEN_KEY);
-    if (!token) {
-        alert("Giriş yapmanız gerekiyor.");
-        window.location.href = "login.html";
-    }
-}
 async function setupLogout() {
     if (!logoutBtn) return;
 
@@ -539,7 +532,7 @@ function showCrudMessage(message, type = "info") {
 
 
 document.addEventListener("DOMContentLoaded", async () => {
-    checkAdminAccess();
+    
     setupLogout();
 
 
