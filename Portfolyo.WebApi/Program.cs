@@ -16,10 +16,20 @@ var serviceProvider = builder.Services.BuildServiceProvider();
 var jwtConfiguration = serviceProvider.GetRequiredService<IOptions<Jwt>>().Value;
 
 
-builder.Services.AddAuthentication()
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 .AddJwtBearer(options =>
 {
-
+    options.Events = new JwtBearerEvents
+    {
+        OnMessageReceived = context =>
+        {
+            if (context.Request.Cookies.ContainsKey("accessToken"))
+            {
+                context.Token = context.Request.Cookies["accessToken"];
+            }
+            return Task.CompletedTask;
+        }
+    };
 
     options.TokenValidationParameters = new TokenValidationParameters
     {
@@ -29,10 +39,10 @@ builder.Services.AddAuthentication()
         ValidateLifetime = true,
         ValidIssuer = jwtConfiguration.Issuer,
         ValidAudience = jwtConfiguration.Audience,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtConfiguration.SecretKey)),
-        ClockSkew = TimeSpan.Zero
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtConfiguration.SecretKey))
     };
 });
+
 
 
 

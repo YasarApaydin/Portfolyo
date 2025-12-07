@@ -28,6 +28,7 @@
             const response = await fetch("https://yasarapaydinportfolyo-a5e0bwb5e8hrede5.westeurope-01.azurewebsites.net/api/auth/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
+                credentials: "include", 
                 body: JSON.stringify({ userNameOrEmail: userName, password: password })
             });
 
@@ -40,7 +41,7 @@
 
             const data = await response.json();
 
-            localStorage.setItem("jwtToken", data.accessToken);
+       
 
             loginMessage.textContent = "Giriş başarılı! Yönlendiriliyor...";
             loginMessage.classList.add("success-message");
