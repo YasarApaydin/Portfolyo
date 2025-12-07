@@ -1,5 +1,6 @@
 ﻿using Azure.Core;
 using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
@@ -8,7 +9,7 @@ using Portfolyo.WebApi.Abstractions;
 
 namespace Portfolyo.WebApi.Controllers
 {
-    [AllowAnonymous]
+  
     public sealed class AuthController : ApiController
     {
         public AuthController(IMediator mediator) : base(mediator)
@@ -17,6 +18,7 @@ namespace Portfolyo.WebApi.Controllers
 
         [HttpPost]
         [EnableRateLimiting("LoginPolicy")]
+        [AllowAnonymous]
         public async Task<IActionResult> Login(LoginCommand loginCommand, CancellationToken cancellationToken)
         {
             try
@@ -48,6 +50,15 @@ namespace Portfolyo.WebApi.Controllers
             }
 
         }
+
+
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        [HttpGet("/admin")]
+        public IActionResult GetAdminPage()
+        {
+            return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "admin.html"), "text/html");
+        }
+
 
 
     }

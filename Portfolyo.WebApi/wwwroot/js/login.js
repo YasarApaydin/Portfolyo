@@ -42,17 +42,33 @@
             }
 
 
+
+
             localStorage.setItem("jwtToken", data.data.accessToken);
 
-           
             loginMessage.textContent = "Giriş başarılı! Yönlendiriliyor...";
             loginMessage.classList.add("success-message");
 
             setTimeout(() => {
-                window.location.href = "/admin.html";
+                const token = localStorage.getItem("jwtToken");
+                if (!token) {
+                    window.location.href = "login.html";
+                } else {
+                    fetch("/admin", {
+                        headers: {
+                            "Authorization": `Bearer ${token}`
+                        }
+                    })
+                        .then(resp => {
+                            if (resp.ok) {
+                                window.location.href = "/admin"; 
+                            } else {
+                                alert("Erişim reddedildi. Lütfen tekrar giriş yapın.");
+                                window.location.href = "login.html";
+                            }
+                        });
+                }
             }, 1000);
-
-
 
 
 
