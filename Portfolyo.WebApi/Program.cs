@@ -106,8 +106,7 @@ app.UseAuthorization();
 app.UseMiddleware<ExceptionMiddleware>();
 app.UseRateLimiter();
 
-app.UseDefaultFiles();
-app.UseStaticFiles();
+
 app.Use(async (context, next) =>
 {
     var path = context.Request.Path.Value?.ToLower();
@@ -125,7 +124,8 @@ app.Use(async (context, next) =>
 });
 
 
-
+app.UseDefaultFiles();
+app.UseStaticFiles();
 
 
 app.MapControllers();
