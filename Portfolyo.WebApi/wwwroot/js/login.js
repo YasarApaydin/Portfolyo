@@ -54,14 +54,14 @@
                 if (!token) {
                     window.location.href = "login.html";
                 } else {
-                    fetch("/admin", {
+                    fetch("https://yasarapaydinportfolyo-a5e0bwb5e8hrede5.westeurope-01.azurewebsites.net/admin", {
                         headers: {
                             "Authorization": `Bearer ${token}`
                         }
                     })
                         .then(resp => {
                             if (resp.ok) {
-                                window.location.href = "/admin"; 
+                                window.location.href = "https://yasarapaydinportfolyo-a5e0bwb5e8hrede5.westeurope-01.azurewebsites.net/admin";
                             } else {
                                 alert("Erişim reddedildi. Lütfen tekrar giriş yapın.");
                                 window.location.href = "login.html";
@@ -69,8 +69,6 @@
                         });
                 }
             }, 1000);
-
-
 
 
         });
