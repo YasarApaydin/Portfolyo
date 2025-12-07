@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Portfolyo.Business;
@@ -89,9 +90,17 @@ if (builder.Environment.IsDevelopment())
 
 
 app.UseMiddleware<ExceptionMiddleware>();
+
+
+
+
+app.UseCors("AllowFrontend");
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
+
+
+
 
 app.Use(async (context, next) =>
 {
@@ -102,19 +111,16 @@ app.Use(async (context, next) =>
         if (!context.User.Identity?.IsAuthenticated ?? true)
         {
             context.Response.StatusCode = 403;
-            return; 
+            return;
         }
     }
 
     await next();
 });
-
-
-app.UseCors("AllowFrontend");
+app.UseRateLimiter();
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
-app.UseRateLimiter();
 
 
 app.MapControllers();
