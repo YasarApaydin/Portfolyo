@@ -314,11 +314,35 @@ function checkAdminAccess() {
         window.location.href = "login.html";
     }
 }
+async function setupLogout() {
+    if (!logoutBtn) return;
 
-function setupLogout() {
-    logoutBtn?.addEventListener("click", () => {
-        localStorage.removeItem(AUTH_TOKEN_KEY);
-        localStorage.removeItem(AUTH_KEY);
+    logoutBtn.addEventListener("click", async () => {
+
+        try {
+            // Sunucuda cookie’yi sil
+            await fetch("/api/auth/logout", {
+                method: "POST",
+                credentials: "include" // Cookie gönderilsin!
+            });
+        } catch (err) {
+            console.error("Logout API hatası:", err);
+        }
+
+        // LocalStorage temizle
+        localStorage.clear();
+
+        // SessionStorage temizle
+        sessionStorage.clear();
+
+        // Frontend cookie'leri sil (HTTP-Only olmayanlar)
+        document.cookie.split(";").forEach(cookie => {
+            const [name] = cookie.split("=");
+
+            document.cookie = `${name.trim()}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/`;
+        });
+
+        // Yönlendir
         window.location.href = "login.html";
     });
 }

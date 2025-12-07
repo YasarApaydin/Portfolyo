@@ -48,6 +48,20 @@ namespace Portfolyo.WebApi.Controllers
 
 
 
+        [HttpPost("logout")]
+        [Authorize]
+        public IActionResult Logout()
+        {
+            Response.Cookies.Append("accessToken", "", new CookieOptions
+            {
+                Expires = DateTime.UtcNow.AddDays(-1),
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.Strict
+            });
+
+            return Ok(new { success = true, message = "Çıkış başarılı." });
+        }
 
 
     }
