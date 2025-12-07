@@ -60,6 +60,7 @@ namespace Portfolyo.WebApi.Controllers
                 SameSite = SameSiteMode.Strict
             });
 
+
             return Ok(new { success = true, message = "Çıkış başarılı." });
         }
 

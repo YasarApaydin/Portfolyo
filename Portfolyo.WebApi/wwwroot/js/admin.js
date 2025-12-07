@@ -307,16 +307,17 @@ async function apiFetch(path, method = "GET", body = null) {
     return payload;
 }
 
-async function setupLogout() {
+
+
+function setupLogout() {
     if (!logoutBtn) return;
 
     logoutBtn.addEventListener("click", async () => {
-
         try {
-            // Sunucuda cookie’yi sil
-            await fetch("/api/auth/logout", {
+            // Sunucudaki Auth cookie'lerini temizle
+            await fetch("https://yasarapaydinportfolyo-a5e0bwb5e8hrede5.westeurope-01.azurewebsites.net/api/auth/logout", {
                 method: "POST",
-                credentials: "include" // Cookie gönderilsin!
+                credentials: "include"
             });
         } catch (err) {
             console.error("Logout API hatası:", err);
@@ -328,14 +329,15 @@ async function setupLogout() {
         // SessionStorage temizle
         sessionStorage.clear();
 
-        // Frontend cookie'leri sil (HTTP-Only olmayanlar)
-        document.cookie.split(";").forEach(cookie => {
-            const [name] = cookie.split("=");
-
-            document.cookie = `${name.trim()}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/`;
+        // Tarayıcıdaki tüm cookie’leri temizle (HttpOnly olmayanlar)
+        document.cookie.split(";").forEach((cookie) => {
+            const eqPos = cookie.indexOf("=");
+            const name = eqPos > -1 ? cookie.substring(0, eqPos) : cookie;
+            document.cookie =
+                name.trim() + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
         });
 
-        // Yönlendir
+        // Kullanıcıyı login sayfasına yönlendir
         window.location.href = "login.html";
     });
 }
@@ -532,7 +534,6 @@ function showCrudMessage(message, type = "info") {
 
 
 document.addEventListener("DOMContentLoaded", async () => {
-    
     setupLogout();
 
 
