@@ -15,7 +15,6 @@
             togglePassword.classList.toggle("fa-eye-slash");
         });
     }
-
     if (loginForm) {
         loginForm.addEventListener('submit', async function (e) {
             e.preventDefault();
@@ -32,26 +31,25 @@
                 body: JSON.stringify({ userNameOrEmail: userName, password: password })
             });
 
-            const data = await response.json();
-
-          
-            if (!response.ok || !data.success) {
-                loginMessage.textContent = data.message || "Hatalı giriş!";
+            if (!response.ok) {
+                const err = await response.json();
+                loginMessage.textContent = err.title || "Hatalı giriş!";
                 loginMessage.classList.add("error-message");
                 return;
             }
 
+            const data = await response.json();
 
-
+            localStorage.setItem("jwtToken", data.accessToken);
 
             loginMessage.textContent = "Giriş başarılı! Yönlendiriliyor...";
             loginMessage.classList.add("success-message");
 
             setTimeout(() => {
-              
                 window.location.href = "/admin.html";
             }, 1000);
-
         });
     }
+
+
 });
