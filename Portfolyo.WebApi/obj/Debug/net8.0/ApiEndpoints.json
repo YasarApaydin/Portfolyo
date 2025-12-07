@@ -1,6 +1,16 @@
 [
   {
     "ContainingType": "Portfolyo.WebApi.Controllers.AuthController",
+    "Method": "GetAdminPage",
+    "RelativePath": "admin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolyo.WebApi.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/Login",
     "HttpMethod": "POST",

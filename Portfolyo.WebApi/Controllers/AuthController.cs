@@ -45,7 +45,12 @@ namespace Portfolyo.WebApi.Controllers
         }
 
 
-       
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        [HttpGet("/admin")]
+        public IActionResult GetAdminPage()
+        {
+            return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "admin.html"), "text/html");
+        }
 
 
 
