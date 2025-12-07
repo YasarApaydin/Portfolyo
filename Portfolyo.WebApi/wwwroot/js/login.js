@@ -49,8 +49,7 @@
             loginMessage.classList.add("success-message");
 
             setTimeout(() => {
-                window.location.href = "/admin.html"
-";
+                window.location.href = "/admin.html";
             }, 1000);
 
 
