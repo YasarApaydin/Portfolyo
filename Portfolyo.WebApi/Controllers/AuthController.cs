@@ -27,14 +27,7 @@ namespace Portfolyo.WebApi.Controllers
                 return BadRequest(new { success = false, message = "Giriş Başarısız." });
 
           
-            var cookieOptions = new CookieOptions
-            {
-                HttpOnly = true,
-                Secure = true, 
-                SameSite = SameSiteMode.Strict,
-                Expires = DateTimeOffset.Now.AddMinutes(2)
-            };
-            Response.Cookies.Append("jwtToken", response.AccessToken, cookieOptions);
+        
 
             return Ok(new
             {
